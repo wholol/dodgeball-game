@@ -33,6 +33,7 @@ private:
 	/*game objects*/
 	eater e;
 	std::vector <balls> ball;	//construct ball objects
+	std::vector <bool> eatenBall;	//checks if ball is eaten
 	
 	
 	static constexpr int number_of_balls = 10;	//10 ball objects;

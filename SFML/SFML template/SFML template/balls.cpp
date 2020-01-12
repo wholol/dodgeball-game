@@ -10,7 +10,6 @@ balls::balls(int screenwidth,int screenheight,int circle_radius,std::random_devi
 	screenheight(screenheight),			//store paramter in class
 	ball_radius(circle_radius),			//store parameter in class
 	rng (rd ())							//construct rng
-	
 {
 	
 	xpos = xDist(rng);					//construct xpos			
@@ -62,13 +61,13 @@ sf::CircleShape balls::drawballs()		//pass the circle shape object to draw
 	return drawcircle;
 }
 
-bool balls::isEaten(eater& eat)			//chcks if it is eaten
+bool balls::Collided(eater& eat)			//chcks if it is eaten
 {
 	if (eat.getxpos() + eat.getrectwidth() > xpos  && eat.getxpos() < (xpos + ball_radius * 2) && eat.getypos() + eat.getrectheight() > ypos && eat.getypos() < ypos + (ball_radius * 2)) {
-		Eaten = true;
-		return Eaten;
+		Collide = true;
+		return Collide;
 	}
-	return Eaten;
+	return Collide;
 	
 }
 

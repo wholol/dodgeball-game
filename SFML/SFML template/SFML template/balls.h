@@ -15,7 +15,7 @@ public:
 
 	void moveballs();	//move the balls (game logic)
 	sf::CircleShape drawballs();		//fucntion to draw/rnder the ball
-	bool isEaten(eater &eat);				//checsk for collision
+	bool Collided(eater &eat);				//checsk for collision
 
 
 private:
@@ -35,5 +35,5 @@ private:
 	int ball_radius;							//ball radius
 	sf::CircleShape drawcircle;					//draw circles
 	int screenwidth, screenheight;				//screewidth adn screenheight parameters
-	bool Eaten = false;
+	bool Collide = false;
 };

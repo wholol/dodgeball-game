@@ -8,7 +8,7 @@ Game::Game(int screenwidth, int screenheight, std::string title, int framerate)
 {
 	font.loadFromFile("Bebas-Regular.ttf");				//load font
 	for (int i = 0; i < number_of_balls; ++i) {		//construct ball vector
-		ball.push_back(balls(screenwidth, screenheight, 10, rd));
+		ball.push_back(balls(screenwidth, screenheight, number_of_balls, rd));
 	}
 	
 	createwindow.setFramerateLimit(framerate);			//set framerate
@@ -25,7 +25,7 @@ void Game::render() {		//rendering
 
 	if (!MainMenu) {
 		for (auto &i : ball) {		//render the balls
-			if (!i.isEaten(e)) {
+			if (!i.Collided(e)) {
 				createwindow.draw(i.drawballs());
 			}
 		}
