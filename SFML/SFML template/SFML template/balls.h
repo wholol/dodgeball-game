@@ -12,7 +12,6 @@ public:
 	balls(int screenwidth, int screenheight, int circle_radius, std::random_device& rd);		//construct the balls radius
 	
 
-
 	void moveballs();	//move the balls (game logic)
 	sf::CircleShape drawballs();		//fucntion to draw/rnder the ball
 	bool Collided(eater &eat);				//checsk for collision

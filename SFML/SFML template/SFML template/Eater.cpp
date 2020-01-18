@@ -10,7 +10,6 @@ eater::eater(int screenwidth, int screenheight, int xpos, int ypos,int rectHeigh
 	rectangle(sf::Vector2f(rectWidth,rectHeight))			//construct rectangle width and height
 
 {
-	
 	rectangle.setFillColor(sf::Color(255, 43, 100));	//fill ball color
 }
 

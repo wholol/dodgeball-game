@@ -3,6 +3,7 @@
 #include <string>
 #include "balls.h"
 #include "Eater.h"
+#include "Goal.h"
 
 class Game {			//game class. should have render, update/events, quit and initialize.
 
@@ -31,9 +32,11 @@ private:
 	bool MainMenu = true;
 	
 	/*game objects*/
-	eater e;
+	eater e;					//an eater object for the player
 	std::vector <balls> ball;	//construct ball objects
 	std::vector <bool> eatenBall;	//checks if ball is eaten
+	Goal goal;				//the goal for the game
+	bool GameOver = false;
 	
 	
 	static constexpr int number_of_balls = 10;	//10 ball objects;

@@ -3,6 +3,7 @@
 
 Game::Game(int screenwidth, int screenheight, std::string title, int framerate)
 	:createwindow(sf::VideoMode(screenwidth, screenheight), title),	//construct window
+	goal(screenwidth, screenheight, 10, 10, rd),
 	e(screenwidth, screenheight, screenwidth - 21, screenheight - 21, 20, 20)	//construct eater
 	
 {
@@ -23,13 +24,21 @@ void Game::render() {		//rendering
 	}
 	
 
-	if (!MainMenu) {
+	if (!MainMenu && !GameOver) {			//if no longer in main menu
 		for (auto &i : ball) {		//render the balls
-			if (!i.Collided(e)) {
-				createwindow.draw(i.drawballs());
+			if (!i.Collided(e)) {		//if no collision with the ball has occurd yet
+				createwindow.draw(i.drawballs());		//draw the balls
+			}
+			else {
+				GameOver = true;
 			}
 		}
 		createwindow.draw(e.drawEater());
+		createwindow.draw(goal.drawGoal());
+
+		if (goal.ReachedGoal(e)) {		//if goal is reached
+			goal.respawn(e);				//create new spawn for the goal
+		}
 	}
 	
 	
