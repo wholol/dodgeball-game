@@ -8,7 +8,6 @@ eater::eater(int screenwidth, int screenheight, int xpos, int ypos,int rectHeigh
 	rectheight(rectHeight),				//constuct rectangle height
 	rectwidth(rectWidth),				//construct rectangle width
 	rectangle(sf::Vector2f(rectWidth,rectHeight))			//construct rectangle width and height
-
 {
 	rectangle.setFillColor(sf::Color(255, 43, 100));	//fill ball color
 }

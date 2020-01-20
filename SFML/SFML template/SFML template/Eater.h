@@ -7,7 +7,7 @@ public:
 	eater(int screenwdith, int screenheight, int xpos, int ypos, int rectWidth, int rectHeight);		//construct eater
 
 	void eatercontrols();
-	sf::RectangleShape drawEater();
+	sf::RectangleShape drawEater();	
 	int getxpos();					//getter for xpos
 	int getypos();					//getter for ypos
 	int getrectwidth();				//getter for rectwidth
@@ -18,8 +18,8 @@ private:
 	int xpos;									//rectangle xpos
 	int ypos;									//rectangle ypos
 
-	static constexpr int xvel = 2;				//x velociy of rectangle
-	static constexpr int yvel = 2;				//y veloicty of rectangle
+	static constexpr int xvel = 3;				//x velociy of rectangle
+	static constexpr int yvel = 3;				//y veloicty of rectangle
 
 	int screenwidth;							//screenwidth
 	int screenheight;							//screenwidth

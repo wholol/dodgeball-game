@@ -11,6 +11,7 @@ public:
 	sf::RectangleShape drawGoal();			//draws the goal spawn 
 	bool ReachedGoal(eater &eat);				//checks if the goal is reached by the eater
 	void respawn(eater& eat);							//generate new spawn for the goal
+	bool GetReachedGoal();				//get the status for reached goal so that the score cane be updated.
 
 
 private:
@@ -27,6 +28,4 @@ private:
 	std::uniform_int_distribution<int> GoalXPos;	//unit distribution for goal spawn
 	std::uniform_int_distribution<int> GoalYPos;	//unit distributio for goal spawn
 	
-
-
 };

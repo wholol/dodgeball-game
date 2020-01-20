@@ -1,6 +1,6 @@
 #include "Goal.h"
 
-Goal::Goal(int screenwidth, int screenheight,int RectHeight, int RectWidth, std::random_device& rd)
+Goal::Goal(int screenwidth, int screenheight,int RectHeight, int RectWidth, std::random_device& rd)	//construct goal object
 	:screenheight(screenheight),
 	screenwidth(screenwidth),
 	goalrectheight(RectHeight),
@@ -10,9 +10,9 @@ Goal::Goal(int screenwidth, int screenheight,int RectHeight, int RectWidth, std:
 	rng( rd() ),
 	GoalRect(sf::Vector2f(RectWidth, RectHeight))			//construct rectangle width and height
 {
-	xpos = GoalXPos(rng);
+	GoalRect.setFillColor(sf::Color(150, 60, 60));
+	xpos = GoalXPos(rng);								
 	ypos = GoalYPos(rng);
-
 }
 
 sf::RectangleShape Goal::drawGoal() {			//draws the goal
@@ -21,7 +21,7 @@ sf::RectangleShape Goal::drawGoal() {			//draws the goal
 	return GoalRect;
 }
 
-bool Goal::ReachedGoal(eater & eat)
+bool Goal::ReachedGoal(eater& eat)
 {
 	if (eat.getxpos() <= xpos + goalrectwidth && eat.getxpos() + eat.getrectwidth() >= xpos && eat.getypos() + goalrectheight >= ypos && eat.getypos() <= ypos + goalrectheight) {
 		reachedGoal = true;
@@ -46,6 +46,10 @@ void Goal::respawn(eater& eat)
 		}
 	}
 	/* prevents rng from putting it under the eater*/
-	
 
+}
+
+bool Goal::GetReachedGoal()
+{
+	return reachedGoal;
 }
