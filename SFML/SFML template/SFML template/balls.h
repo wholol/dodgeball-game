@@ -20,10 +20,10 @@ public:
 private:
 	
 	std::mt19937 rng;				//rng function
-	std::uniform_int_distribution<int> xDist;	//rng function
-	std::uniform_int_distribution<int> yDist;	//rng function
-	std::uniform_int_distribution<int> yVel;	//rng function
-	std::uniform_int_distribution<int> xVel;	//rng function
+	std::uniform_real_distribution<float> xDist;	//rng function
+	std::uniform_real_distribution<float> yDist;	//rng function
+	std::uniform_real_distribution<float> yVel;	//rng function
+	std::uniform_real_distribution<float> xVel;	//rng function
 	
 	
 	

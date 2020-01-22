@@ -16,7 +16,6 @@ Goal::Goal(int screenwidth, int screenheight,int RectHeight, int RectWidth, std:
 }
 
 sf::RectangleShape Goal::drawGoal() {			//draws the goal
-
 	GoalRect.setPosition(xpos, ypos);
 	return GoalRect;
 }

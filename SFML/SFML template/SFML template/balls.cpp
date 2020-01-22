@@ -2,10 +2,10 @@
 
 balls::balls(int screenwidth,int screenheight,int circle_radius,std::random_device& rd)			//construct ball position and coordinates
 	:drawcircle(circle_radius),			//construct circle radius
-	xDist(0, screenwidth - 40),			//construct xdist
-	yDist(0, screenheight - 40),		//consturct ydist
-	yVel(-2, 2),						//velocity rng. ensure it is between -2 and 2
-	xVel(-2,2),							//velocity rng. ensure it is between -2 and 2
+	xDist(0, screenwidth - 80),			//construct xdist
+	yDist(0, screenheight - 80),		//consturct ydist
+	yVel(-2.5f, 2.5f),						//velocity rng. ensure it is between -2 and 2
+	xVel(-2.5f,2.5f),							//velocity rng. ensure it is between -2 and 2
 	screenwidth(screenwidth),			//store parameter in class
 	screenheight(screenheight),			//store paramter in class
 	ball_radius(circle_radius),			//store parameter in class

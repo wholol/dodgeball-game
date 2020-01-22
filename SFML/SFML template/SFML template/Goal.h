@@ -25,7 +25,7 @@ private:
 	bool reachedGoal = false;	//check if goal is reached
 	sf::RectangleShape GoalRect;		//rectangleshape for goal
 	std::mt19937 rng;		//rng
-	std::uniform_int_distribution<int> GoalXPos;	//unit distribution for goal spawn
-	std::uniform_int_distribution<int> GoalYPos;	//unit distributio for goal spawn
+	std::uniform_real_distribution<float> GoalXPos;	//unit distribution for goal spawn
+	std::uniform_real_distribution<float> GoalYPos;	//unit distributio for goal spawn
 	
 };
